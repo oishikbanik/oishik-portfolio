@@ -13,10 +13,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' cdnjs.cloudflare.com; connect-src 'self';"
     />
-    <meta
-      http-equiv="Permissions-Policy"
-      content="geolocation=(), camera=(), microphone=()"
-    />
+
     <meta
       http-equiv="Referrer-Policy"
       content="strict-origin-when-cross-origin"
@@ -59,25 +56,33 @@
         <img src="assets/ob logo.svg" alt="Logo" style="height: 40px" />
       </div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <button
+          class="hamburger-icon"
+          id="menu-toggle-btn"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </button>
+        <ul class="menu-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
     <section id="profile" aria-label="Profile Section">
       <div class="section__pic-container">
-        <img
-          src="./assets/profile-pic.webp"
-          alt="Oishik Banik - Frontend Developer"
-        />
+        <picture>
+          <source srcset="assets/profile-pic.webp" type="image/webp" />
+          <img
+            src="assets/profile-pic.jpg"
+            alt="Oishik Banik - Frontend Developer"
+          />
+        </picture>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -189,20 +194,11 @@
         <div class="exp-bars-col">
           <h2 class="exp-bars-title">Programming Languages</h2>
           <div class="exp-bar-row">
-            <span class="exp-bar-label">Python</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress exp-bar-python"
-                data-progress="85"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
             <span class="exp-bar-label">JavaScript</span>
             <div class="exp-bar-bg">
               <div
                 class="exp-bar-fill skill-progress exp-bar-js"
-                data-progress="80"
+                data-progress="90"
               ></div>
             </div>
           </div>
@@ -211,16 +207,25 @@
             <div class="exp-bar-bg">
               <div
                 class="exp-bar-fill skill-progress exp-bar-htmlcss"
-                data-progress="95"
+                data-progress="98"
               ></div>
             </div>
           </div>
           <div class="exp-bar-row">
-            <span class="exp-bar-label">Lua</span>
+            <span class="exp-bar-label">Python</span>
             <div class="exp-bar-bg">
               <div
-                class="exp-bar-fill skill-progress exp-bar-lua"
-                data-progress="65"
+                class="exp-bar-fill skill-progress"
+                data-progress="90"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">TypeScript</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress"
+                data-progress="75"
               ></div>
             </div>
           </div>
@@ -228,38 +233,38 @@
         <div class="exp-bars-col">
           <h2 class="exp-bars-title">Frameworks &amp; Tools</h2>
           <div class="exp-bar-row">
-            <span class="exp-bar-label">Git</span>
+            <span class="exp-bar-label">React.js</span>
             <div class="exp-bar-bg">
               <div
-                class="exp-bar-fill skill-progress exp-bar-git"
-                data-progress="90"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">Solar2D</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress exp-bar-solar2d"
+                class="exp-bar-fill skill-progress"
                 data-progress="75"
               ></div>
             </div>
           </div>
           <div class="exp-bar-row">
-            <span class="exp-bar-label">VS Code</span>
+            <span class="exp-bar-label">Tailwind CSS</span>
             <div class="exp-bar-bg">
               <div
-                class="exp-bar-fill skill-progress exp-bar-vscode"
-                data-progress="95"
+                class="exp-bar-fill skill-progress"
+                data-progress="85"
               ></div>
             </div>
           </div>
           <div class="exp-bar-row">
-            <span class="exp-bar-label">PyCharm</span>
+            <span class="exp-bar-label">Git</span>
             <div class="exp-bar-bg">
               <div
-                class="exp-bar-fill skill-progress exp-bar-pycharm"
-                data-progress="80"
+                class="exp-bar-fill skill-progress"
+                data-progress="98"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">Vite</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress"
+                data-progress="60"
               ></div>
             </div>
           </div>
@@ -391,10 +396,9 @@
           </div>
           <div class="project-showcase-content">
             <div class="project-showcase-title">My Portfolio</div>
-
             <div class="project-showcase-desc">
-              This is fully responsive portfolio website, built using HTML, CSS
-              and JavaScript.
+              A personal website showcasing my portfolio, skills, and
+              experiences.
             </div>
             <div class="project-showcase-tools">
               <span class="project-tool">HTML</span>

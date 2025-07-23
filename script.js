@@ -13,39 +13,34 @@ function debounce(func, wait) {
     };
 }
 
-// Initialize skill bars animation
-document.addEventListener('DOMContentLoaded', () => {
-    const skillBars = document.querySelectorAll('.exp-bar-fill');
-    const expSection = document.getElementById('experience');
-    
-    if (!expSection || !skillBars.length) {
-        console.warn('Experience section or skill bars not found');
+// Animate skill bars using IntersectionObserver
+function animateSkillBars(sectionSelector) {
+    const section = document.querySelector(sectionSelector);
+    if (!section) return;
+
+    const bars = section.querySelectorAll('.exp-bar-fill');
+    if (!bars.length) {
+        console.warn('Skill bars not found');
         return;
     }
 
     // Initialize bars with 0 width
-    skillBars.forEach(bar => {
+    bars.forEach(bar => {
         bar.style.width = '0';
         bar.style.transition = 'none';
     });
 
-    // Use Intersection Observer for better performance
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Animate skill bars
-                requestAnimationFrame(() => {
-                    skillBars.forEach(bar => {
+                bars.forEach(bar => {
+                    const progress = bar.getAttribute('data-progress');
+                    if (progress) {
                         bar.style.transition = 'width 1s ease-out';
-                        const progress = bar.getAttribute('data-progress');
-                        if (progress) {
-                            bar.style.width = `${progress}%`;
-                        }
-                    });
+                        bar.style.width = `${progress}%`;
+                    }
                 });
-                
-                // Disconnect observer after animation
-                observer.disconnect();
+                obs.disconnect();
             }
         });
     }, {
@@ -53,31 +48,27 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -100px 0px'
     });
 
-    observer.observe(expSection);
-});
-// Menu functionality
+    observer.observe(section);
+}
+
+// Mobile menu functionality
 class MobileMenu {
-    constructor() {
-        this.menu = document.querySelector('.menu-links');
-        this.icon = document.querySelector('.hamburger-icon');
+    constructor(toggleBtnSelector, menuSelector) {
+        this.icon = document.querySelector(toggleBtnSelector);
+        this.menu = document.querySelector(menuSelector);
         this.isOpen = false;
 
-        // Bind methods
-        this.toggle = this.toggle.bind(this);
-        this.handleKeyboard = this.handleKeyboard.bind(this);
-        
-        // Add keyboard support
-        this.icon?.addEventListener('keydown', this.handleKeyboard);
+        if (this.icon && this.menu) {
+            this.icon.addEventListener('keydown', this.handleKeyboard.bind(this));
+        }
     }
 
     toggle() {
-        if (!this.menu || !this.icon) return;
-        
+        if (!this.icon || !this.menu) return;
+
         this.isOpen = !this.isOpen;
-        this.menu.classList.toggle('open', this.isOpen);
         this.icon.classList.toggle('open', this.isOpen);
-        
-        // Accessibility
+        this.menu.classList.toggle('open', this.isOpen);
         this.icon.setAttribute('aria-expanded', String(this.isOpen));
     }
 
@@ -85,8 +76,7 @@ class MobileMenu {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
             this.toggle();
-        }
-        if (event.key === 'Escape' && this.isOpen) {
+        } else if (event.key === 'Escape' && this.isOpen) {
             this.toggle();
         }
     }
@@ -94,15 +84,13 @@ class MobileMenu {
 
 // Back to top functionality
 class BackToTop {
-    constructor() {
-        this.button = document.getElementById('back-to-top');
+    constructor(buttonId) {
+        this.button = document.getElementById(buttonId);
         if (!this.button) return;
 
-        // Bind methods
         this.handleScroll = debounce(this.handleScroll.bind(this), 100);
         this.scrollToTop = this.scrollToTop.bind(this);
 
-        // Initialize
         this.init();
     }
 
@@ -116,6 +104,7 @@ class BackToTop {
         this.button.classList.toggle('visible', shouldShow);
     }
 
+
     scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -124,9 +113,14 @@ class BackToTop {
     }
 }
 
-// Initialize components
-const mobileMenu = new MobileMenu();
-const backToTop = new BackToTop();
+// DOM Ready
+document.addEventListener('DOMContentLoaded', () => {
+    animateSkillBars('#experience');
 
-// Export toggle function for HTML onclick
-window.toggleMenu = mobileMenu.toggle.bind(mobileMenu);
+    const mobileMenu = new MobileMenu('#menu-toggle-btn', '.menu-links');
+    document.querySelector('#menu-toggle-btn')?.addEventListener('click', () => {
+        mobileMenu.toggle();
+    });
+
+    new BackToTop('back-to-top');
+});

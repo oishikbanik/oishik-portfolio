@@ -1,3 +1,4 @@
+/* Base and shared styles for responsiveness */
 @media screen and (max-width: 1440px) {
   #hamburger-nav {
     padding: 0 1.5rem;
@@ -14,6 +15,7 @@
   .about-desc-custom {
     text-align: center;
   }
+
   .about-cards-row {
     justify-content: space-between;
     gap: 20px;
@@ -25,6 +27,9 @@
   .about-card {
     padding: 20px 16px;
   }
+  .about-card-desc {
+    text-align: start;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -35,7 +40,7 @@
     display: flex;
     padding: 0 1.5rem;
   }
-   #profile {
+  #profile {
     flex-direction: column;
     gap: 2rem;
     height: auto;
@@ -65,8 +70,10 @@
   .about-card {
     min-width: 180px;
   }
+  .about-card-desc {
+    text-align: start;
+  }
 }
-
 
 @media screen and (max-width: 768px) {
   section {
@@ -88,6 +95,14 @@
     max-width: 500px;
     margin: 0 auto;
   }
+  .project-showcase-row {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+  .project-showcase-img {
+    max-width: 100%;
+    height: auto;
+  }
   .exp-bars-col {
     min-width: 260px;
   }
@@ -98,8 +113,13 @@
     width: 240px;
     height: 290px;
   }
+  .about-card-desc {
+    text-align: start;
+  }
   .about-cards-row {
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -113,9 +133,6 @@
     min-width: 100%;
     max-width: 100%;
   }
-}
-
-@media screen and (max-width: 600px) {
   .contact-info-upper-container {
     flex-direction: column;
     align-items: center;
@@ -137,10 +154,7 @@
   #hamburger-nav {
     padding: 0 1.5rem;
   }
-  .logo {
-    padding: 1rem 0;
-  }
-  .hamburger-menu {
+  .logo, .hamburger-menu {
     padding: 1rem 0;
   }
   .section__pic-container {
@@ -152,8 +166,7 @@
     font-size: 1.25rem;
   }
   .about-section-custom {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin: 24px 0;
   }
   .about-img-box {
     width: 100%;
@@ -166,20 +179,23 @@
     font-size: 1rem;
     margin-bottom: 24px;
     padding: 0 0.5rem;
+
   }
   .about-cards-row {
-    gap: 16px;
+    padding: 0;
+    gap: 1rem;
   }
   .about-card {
     min-width: 100%;
     max-width: none;
     padding: 20px 16px;
+    margin: 0 1rem;
   }
   .about-card-title {
     font-size: 1rem;
   }
   .about-card-desc {
-    font-size: 0.9rem;
+    text-align: start;
   }
   .title {
     font-size: 2rem;
@@ -209,7 +225,7 @@
   }
   .project-showcase-actions {
     flex-direction: row;
-    padding: 0 16px 16px 16px;
+    padding: 0 16px 16px;
   }
   .project-action-btn {
     font-size: 0.9rem;
@@ -239,24 +255,20 @@
     gap: 1rem;
     font-size: 1rem;
   }
-  footer .nav-links li a {
+  footer .nav-links li a,
+  footer p {
     font-size: 1rem;
   }
   footer p {
-    font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
 }
 
-/* Extra small devices */
 @media screen and (max-width: 360px) {
   #hamburger-nav {
     padding: 0 1rem;
   }
-  .logo {
-    padding: 0.5rem 0;
-  }
-  .hamburger-menu {
+  .logo, .hamburger-menu {
     padding: 0.5rem 0;
   }
   .section__pic-container {
@@ -299,7 +311,6 @@
   }
 }
 
-/* Landscape mode for mobile devices */
 @media screen and (max-height: 600px) and (orientation: landscape) {
   section {
     min-height: auto;
@@ -337,11 +348,8 @@
   .exp-bars-wrapper {
     flex-direction: row;
   }
-  nav {
+  nav, #hamburger-nav {
     height: auto;
     padding: 1rem;
-  }
-  #hamburger-nav {
-    height: auto;
   }
 }

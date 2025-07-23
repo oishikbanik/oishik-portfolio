@@ -40,7 +40,7 @@
 }
 .exp-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #111 70%, #888 100%);
+  background: linear-gradient(90deg, #111 70%, #646464 100%);
   border-radius: 6px;
   width: 0;
   transition: none;
@@ -51,26 +51,7 @@
   transition: width 1s ease-out;
 }
 
-/* Individual bar widths */
-.exp-bar-python { width: 85%; }
-.exp-bar-js { width: 80%; }
-.exp-bar-htmlcss { width: 95%; }
-.exp-bar-lua { width: 65%; }
-.exp-bar-git { width: 90%; }
-.exp-bar-solar2d { width: 75%; }
-.exp-bar-vscode { width: 95%; }
-.exp-bar-pycharm { width: 80%; }
-@media (max-width: 900px) {
-  .exp-bars-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 40px;
-  }
-  .exp-bars-col {
-    max-width: 100%;
-    min-width: 0;
-  }
-}
+
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -78,6 +59,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -170,6 +152,8 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 
 .hamburger-icon span {
@@ -227,15 +211,9 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
 
 /* SECTIONS */
 /* --- Custom About Section Styles --- */
@@ -317,17 +295,7 @@ a:hover {
   box-shadow: 2px 3px 0px 0px #111, 0 2px 8px rgba(0,0,0,0.09);
   border: 2px solid #111;
 }
-@media (max-width: 480px) {
-  .about-card {
-    min-width: 100%;
-    max-width: none;
-    margin: 0 1rem;
-  }
-  .about-cards-row {
-    padding: 0;
-    gap: 1rem;
-  }
-}
+
 .about-card-icon {
   font-size: 1.7rem;
   color: #222;
@@ -716,31 +684,6 @@ article .icon {
   text-decoration: none;
 }
 
-@media (max-width: 1200px) {
-  .project-showcase-row {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  .project-showcase-card {
-    width: calc(50% - 0.75rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .project-showcase-card {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  .project-showcase-row {
-    padding: 0 1rem;
-    gap: 1.5rem;
-  }
-  .project-showcase-img {
-    max-width: 100%;
-    height: auto;
-  }
-}
 
 /* CONTACT */
 
@@ -757,7 +700,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
