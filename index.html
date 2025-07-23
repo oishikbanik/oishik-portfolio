@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oishik Banik - Frontend Developer Portfolio showcasing projects and expertise in web development"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' cdnjs.cloudflare.com; connect-src 'self';"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), camera=(), microphone=()"
+    />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <title>Oishik Banik</title>
+    <link rel="icon" href="assets/ob logo white.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav" aria-label="Desktop navigation">
+      <div class="logo">
+        <img
+          src="assets/ob logo.svg"
+          alt="Oishik Banik Logo"
+          width="40"
+          height="40"
+        />
+      </div>
+      <div>
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#about" role="menuitem">About</a></li>
+          <li role="none">
+            <a href="#experience" role="menuitem">Experience</a>
+          </li>
+          <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">
+        <img src="assets/ob logo.svg" alt="Logo" style="height: 40px" />
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile" aria-label="Profile Section">
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile-pic.png"
+          alt="Oishik Banik - Frontend Developer"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Oishik Banik</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <a
+            href="https://www.linkedin.com/in/oishikbanik/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Visit my LinkedIn profile"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn"
+              class="icon"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://github.com/oishikbanik"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Visit my GitHub profile"
+          >
+            <img
+              src="./assets/github.png"
+              alt="GitHub"
+              class="icon"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="about-section-custom">
+        <div class="about-section-custom-inner">
+          <div class="about-img-box">
+            <img
+              src="./assets/about-pic.jpg"
+              alt="Profile picture"
+              class="about-pic-custom"
+              loading="lazy"
+              width="280"
+              height="340"
+            />
+          </div>
+          <div class="about-content-box">
+            <p class="about-desc-custom">
+              I am a passionate Frontend Developer with a strong foundation in
+              web technologies. I specialize in creating responsive and
+              user-friendly web applications using HTML, CSS, and JavaScript. My
+              goal is to build engaging digital experiences that are both
+              functional and visually appealing.
+            </p>
+            <div class="about-cards-row">
+              <div class="about-card about-card-active">
+                <div class="about-card-icon">&#60;/&#62;</div>
+                <div class="about-card-title">Languages</div>
+                <div class="about-card-desc">
+                  HTML, CSS, JavaScript<br />React Js, Next Js
+                </div>
+              </div>
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <i style="font-size: 24px" class="fa">&#xf19d;</i>
+                </div>
+                <div class="about-card-title">Education</div>
+                <div class="about-card-desc">
+                  BSc in Computer Science & Engineering
+                </div>
+              </div>
+              <div class="about-card">
+                <div class="about-card-icon">
+                  <img
+                    src="assets/project-diagram-solid.svg"
+                    alt="Project Diagram"
+                    style="width: 24px; height: 24px; vertical-align: middle"
+                  />
+                </div>
+                <div class="about-card-title">Projects</div>
+                <div class="about-card-desc">
+                  Built more than 5<br />projects
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="exp-bars-wrapper">
+        <div class="exp-bars-col">
+          <h2 class="exp-bars-title">Programming Languages</h2>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">Python</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-python"
+                data-progress="85"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">JavaScript</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-js"
+                data-progress="80"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">HTML/CSS</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-htmlcss"
+                data-progress="95"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">Lua</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-lua"
+                data-progress="65"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-bars-col">
+          <h2 class="exp-bars-title">Frameworks &amp; Tools</h2>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">Git</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-git"
+                data-progress="90"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">Solar2D</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-solar2d"
+                data-progress="75"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">VS Code</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-vscode"
+                data-progress="95"
+              ></div>
+            </div>
+          </div>
+          <div class="exp-bar-row">
+            <span class="exp-bar-label">PyCharm</span>
+            <div class="exp-bar-bg">
+              <div
+                class="exp-bar-fill skill-progress exp-bar-pycharm"
+                data-progress="80"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="project-showcase-row">
+        <div class="project-showcase-card">
+          <div class="project-showcase-imgbox">
+            <img
+              src="./assets/pawcare.gif"
+              alt="PawCare"
+              class="project-showcase-img"
+            />
+          </div>
+          <div class="project-showcase-content">
+            <div class="project-showcase-title">Paws & Care</div>
+
+            <div class="project-showcase-desc">
+              Paws & Care is a modern, responsive pet adoption website that
+              connects loving pets with caring homes. It offers an easy-to-use
+              platform for browsing available pets and starting the adoption
+              process from any device.
+            </div>
+            <div class="project-showcase-tools">
+              <span class="project-tool">HTML</span>
+              <span class="project-tool">CSS</span>
+              <span class="project-tool">JavaScript</span>
+            </div>
+            <div class="project-showcase-actions">
+              <a
+                href="https://oishikbanik.github.io/paw-care/"
+                class="project-action-btn"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Website</a
+              >
+              <a
+                href="https://github.com/oishikbanik/paw-care"
+                class="project-action-btn"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+                ><img
+                  src="assets/github.png"
+                  alt="GitHub"
+                  style="
+                    height: 1.2em;
+                    margin-right: 6px;
+                    filter: invert(1) brightness(2);
+                  "
+                  loading="lazy"
+                />
+                <span style="display: inline-block">GitHub</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-showcase-card">
+          <div class="project-showcase-imgbox">
+            <img
+              src="./assets/nondonkanon.gif"
+              alt="nondonkanon"
+              class="project-showcase-img"
+            />
+          </div>
+          <div class="project-showcase-content">
+            <div class="project-showcase-title">NondonKanon</div>
+
+            <div class="project-showcase-desc">
+              NondonKanon is a fully responsive eCommerce website where users
+              can browse and shop for sarees, skincare products, and jewelry. It
+              features product search, filtering options, and a seamless buying
+              experience across all devices.
+            </div>
+            <div class="project-showcase-tools">
+              <span class="project-tool">HTML</span>
+              <span class="project-tool">CSS</span>
+              <span class="project-tool">JavaScript</span>
+              <span class="project-tool">TypeScript</span>
+            </div>
+            <div class="project-showcase-actions">
+              <a
+                href="https://github.com/oishikbanik/nondonkanon-shop"
+                class="project-action-btn"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Website</a
+              >
+              <a
+                href="https://github.com/oishikbanik/nondonkanon-shop"
+                class="project-action-btn"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+                ><img
+                  src="assets/github.png"
+                  alt="GitHub"
+                  style="
+                    height: 1.2em;
+                    margin-right: 6px;
+                    filter: invert(1) brightness(2);
+                  "
+                  loading="lazy"
+                />
+                <span style="display: inline-block">GitHub</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-showcase-card">
+          <div class="project-showcase-imgbox">
+            <img
+              src="./assets/porfolio.gif"
+              alt="portfolio"
+              class="project-showcase-img"
+            />
+          </div>
+          <div class="project-showcase-content">
+            <div class="project-showcase-title">My Portfolio</div>
+
+            <div class="project-showcase-desc">
+              This is fully responsive portfolio website, built using HTML, CSS
+              and JavaScript.
+            </div>
+            <div class="project-showcase-tools">
+              <span class="project-tool">HTML</span>
+              <span class="project-tool">CSS</span>
+              <span class="project-tool">JavaScript</span>
+            </div>
+            <div class="project-showcase-actions">
+              <a
+                href="https://github.com/oishikbanik"
+                class="project-action-btn"
+                >Website</a
+              >
+              <a
+                href="https://github.com/oishikbanik"
+                class="project-action-btn"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+                ><img
+                  src="assets/github.png"
+                  alt="GitHub"
+                  style="
+                    height: 1.2em;
+                    margin-right: 6px;
+                    filter: invert(1) brightness(2);
+                  "
+                />
+                <span style="display: inline-block">GitHub</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a
+              href="#"
+              class="email-protection"
+              data-email="contact.oishikbanik@gmail.com"
+              onclick="window.location.href = 'mailto:' + this.dataset.email; return false;"
+              >Email Me</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+            loading="lazy"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/oishikbanik/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>&#169; 2025 Oishik Banik. All Rights Reserved.</p>
+      <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        ↑
+      </button>
+    </footer>
+    <script>
+      // Prevent auto-scroll to anchor on page load
+      if (window.location.hash) {
+        history.replaceState(null, null, " ");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
