@@ -8,7 +8,7 @@
       content="Oishik Banik - Frontend Developer Portfolio showcasing projects and expertise in web development"
     />
     <meta name="author" content="Oishik Banik" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="x-content-type-options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -42,13 +42,11 @@
         />
       </div>
       <div>
-        <ul class="nav-links" role="menubar">
-          <li role="none"><a href="#about" role="menuitem">About</a></li>
-          <li role="none">
-            <a href="#experience" role="menuitem">Experience</a>
-          </li>
-          <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
-          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -75,405 +73,369 @@
         </ul>
       </div>
     </nav>
-    <section id="profile" aria-label="Profile Section">
-      <div class="section__pic-container">
-        <picture>
-          <source srcset="assets/profile-pic.webp" type="image/webp" />
-          <img
-            src="assets/profile-pic.jpg"
-            alt="Oishik Banik - Frontend Developer"
-          />
-        </picture>
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Oishik Banik</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <a
-            href="https://www.linkedin.com/in/oishikbanik/"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            aria-label="Visit my LinkedIn profile"
-          >
+    <main>
+      <section id="profile" aria-label="Profile Section">
+        <div class="section__pic-container">
+          <picture>
+            <source srcset="assets/profile-pic.webp" type="image/webp" />
             <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn"
-              class="icon"
-              loading="lazy"
+              src="assets/profile-pic.jpg"
+              alt="Oishik Banik - Frontend Developer"
             />
-          </a>
-          <a
-            href="https://github.com/oishikbanik"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            aria-label="Visit my GitHub profile"
-          >
-            <img
-              src="./assets/github.png"
-              alt="GitHub"
-              class="icon"
-              loading="lazy"
-            />
-          </a>
+          </picture>
         </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="about-section-custom">
-        <div class="about-section-custom-inner">
-          <div class="about-img-box">
-            <img
-              src="./assets/about-pic.webp"
-              alt="Profile picture"
-              class="about-pic-custom"
-              loading="lazy"
-              width="280"
-              height="340"
-            />
-          </div>
-          <div class="about-content-box">
-            <p class="about-desc-custom">
-              I am a passionate Frontend Developer with a strong foundation in
-              web technologies. I specialize in creating responsive and
-              user-friendly web applications using HTML, CSS, and JavaScript. My
-              goal is to build engaging digital experiences that are both
-              functional and visually appealing.
-            </p>
-            <div class="about-cards-row">
-              <div class="about-card about-card-active">
-                <div class="about-card-icon">&#60;/&#62;</div>
-                <div class="about-card-title">Languages</div>
-                <div class="about-card-desc">
-                  HTML, CSS, JavaScript<br />React Js, Next Js
-                </div>
-              </div>
-              <div class="about-card">
-                <div class="about-card-icon">
-                  <i style="font-size: 24px" class="fa">&#xf19d;</i>
-                </div>
-                <div class="about-card-title">Education</div>
-                <div class="about-card-desc">
-                  BSc in Computer Science & Engineering
-                </div>
-              </div>
-              <div class="about-card">
-                <div class="about-card-icon">
-                  <img
-                    src="assets/project-diagram-solid.svg"
-                    alt="Project Diagram"
-                    style="width: 24px; height: 24px; vertical-align: middle"
-                  />
-                </div>
-                <div class="about-card-title">Projects</div>
-                <div class="about-card-desc">
-                  Built more than 5<br />projects
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="exp-bars-wrapper">
-        <div class="exp-bars-col">
-          <h2 class="exp-bars-title">Programming Languages</h2>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">JavaScript</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress exp-bar-js"
-                data-progress="90"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">HTML/CSS</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress exp-bar-htmlcss"
-                data-progress="98"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">Python</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="90"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">TypeScript</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="75"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div class="exp-bars-col">
-          <h2 class="exp-bars-title">Frameworks &amp; Tools</h2>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">React.js</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="75"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">Tailwind CSS</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="85"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">Git</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="98"
-              ></div>
-            </div>
-          </div>
-          <div class="exp-bar-row">
-            <span class="exp-bar-label">Vite</span>
-            <div class="exp-bar-bg">
-              <div
-                class="exp-bar-fill skill-progress"
-                data-progress="60"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="project-showcase-row">
-        <div class="project-showcase-card">
-          <div class="project-showcase-imgbox">
-            <img
-              src="./assets/pawcare.gif"
-              alt="PawCare"
-              class="project-showcase-img"
-            />
-          </div>
-          <div class="project-showcase-content">
-            <div class="project-showcase-title">Paws & Care</div>
-
-            <div class="project-showcase-desc">
-              Paws & Care is a modern, responsive pet adoption website that
-              connects loving pets with caring homes. It offers an easy-to-use
-              platform for browsing available pets and starting the adoption
-              process from any device.
-            </div>
-            <div class="project-showcase-tools">
-              <span class="project-tool">HTML</span>
-              <span class="project-tool">CSS</span>
-              <span class="project-tool">JavaScript</span>
-            </div>
-            <div class="project-showcase-actions">
-              <a
-                href="https://oishikbanik.github.io/paw-care/"
-                class="project-action-btn"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Website</a
-              >
-              <a
-                href="https://github.com/oishikbanik/paw-care"
-                class="project-action-btn"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-                ><img
-                  src="assets/github.png"
-                  alt="GitHub"
-                  style="
-                    height: 1.2em;
-                    margin-right: 6px;
-                    filter: invert(1) brightness(2);
-                  "
-                  loading="lazy"
-                />
-                <span style="display: inline-block">GitHub</span></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="project-showcase-card">
-          <div class="project-showcase-imgbox">
-            <img
-              src="./assets/nondonkanon.gif"
-              alt="nondonkanon"
-              class="project-showcase-img"
-            />
-          </div>
-          <div class="project-showcase-content">
-            <div class="project-showcase-title">NondonKanon</div>
-
-            <div class="project-showcase-desc">
-              NondonKanon is a fully responsive eCommerce website where users
-              can browse and shop for sarees, skincare products, and jewelry. It
-              features product search, filtering options, and a seamless buying
-              experience across all devices.
-            </div>
-            <div class="project-showcase-tools">
-              <span class="project-tool">HTML</span>
-              <span class="project-tool">CSS</span>
-              <span class="project-tool">JavaScript</span>
-              <span class="project-tool">TypeScript</span>
-            </div>
-            <div class="project-showcase-actions">
-              <a
-                href="https://github.com/oishikbanik/nondonkanon-shop"
-                class="project-action-btn"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Website</a
-              >
-              <a
-                href="https://github.com/oishikbanik/nondonkanon-shop"
-                class="project-action-btn"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-                ><img
-                  src="assets/github.png"
-                  alt="GitHub"
-                  style="
-                    height: 1.2em;
-                    margin-right: 6px;
-                    filter: invert(1) brightness(2);
-                  "
-                  loading="lazy"
-                />
-                <span style="display: inline-block">GitHub</span></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="project-showcase-card">
-          <div class="project-showcase-imgbox">
-            <img
-              src="./assets/porfolio.gif"
-              alt="portfolio"
-              class="project-showcase-img"
-            />
-          </div>
-          <div class="project-showcase-content">
-            <div class="project-showcase-title">My Portfolio</div>
-            <div class="project-showcase-desc">
-              A personal website showcasing my portfolio, skills, and
-              experiences.
-            </div>
-            <div class="project-showcase-tools">
-              <span class="project-tool">HTML</span>
-              <span class="project-tool">CSS</span>
-              <span class="project-tool">JavaScript</span>
-            </div>
-            <div class="project-showcase-actions">
-              <a
-                href="https://oishikbanik.github.io/oishik-portfolio/"
-                class="project-action-btn"
-                >Website</a
-              >
-              <a
-                href="https://github.com/oishikbanik/oishik-portfolio"
-                class="project-action-btn"
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-                ><img
-                  src="assets/github.png"
-                  alt="GitHub"
-                  style="
-                    height: 1.2em;
-                    margin-right: 6px;
-                    filter: invert(1) brightness(2);
-                  "
-                />
-                <span style="display: inline-block">GitHub</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a
-              href="#"
-              class="email-protection"
-              data-email="contact.oishikbanik@gmail.com"
-              onclick="window.location.href = 'mailto:' + this.dataset.email; return false;"
-              >Email Me</a
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Oishik Banik</h1>
+          <p class="section__text__p2">Frontend Developer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/resume-example.pdf')"
             >
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-            loading="lazy"
-          />
-          <p>
+              Download CV
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href='./#contact'"
+            >
+              Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
             <a
               href="https://www.linkedin.com/in/oishikbanik/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              >LinkedIn</a
+              aria-label="Visit my LinkedIn profile"
             >
-          </p>
+              <img
+                src="./assets/linkedin.png"
+                alt="LinkedIn"
+                class="icon"
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="https://github.com/oishikbanik"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Visit my GitHub profile"
+            >
+              <img
+                src="./assets/github.png"
+                alt="GitHub"
+                class="icon"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h2 class="title">About Me</h2>
+        <div class="about-section-custom">
+          <div class="about-section-custom-inner">
+            <div class="about-img-box">
+              <img
+                src="./assets/about-pic.webp"
+                alt="Profile picture"
+                class="about-pic-custom"
+                loading="lazy"
+                width="280"
+                height="340"
+              />
+            </div>
+            <div class="about-content-box">
+              <p class="about-desc-custom">
+                I am a passionate Frontend Developer with a strong foundation in
+                web technologies. I specialize in creating responsive and
+                user-friendly web applications using HTML, CSS, and JavaScript.
+                My goal is to build engaging digital experiences that are both
+                functional and visually appealing.
+              </p>
+              <div class="about-cards-row">
+                <div class="about-card about-card-active">
+                  <div class="about-card-icon">&#60;/&#62;</div>
+                  <div class="about-card-title">Languages</div>
+                  <div class="about-card-desc">
+                    HTML, CSS, JavaScript<br />React Js, Next Js
+                  </div>
+                </div>
+                <div class="about-card">
+                  <div class="about-card-icon">
+                    <i style="font-size: 24px" class="fa">&#xf19d;</i>
+                  </div>
+                  <div class="about-card-title">Education</div>
+                  <div class="about-card-desc">
+                    BSc in Computer Science & Engineering
+                  </div>
+                </div>
+                <div class="about-card">
+                  <div class="about-card-icon">
+                    <img
+                      src="assets/project-diagram-solid.svg"
+                      alt="Project Diagram"
+                      style="width: 24px; height: 24px; vertical-align: middle"
+                    />
+                  </div>
+                  <div class="about-card-title">Projects</div>
+                  <div class="about-card-desc">
+                    Built more than 5<br />projects
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h2 class="title">Experience</h2>
+        <div class="exp-bars-wrapper">
+          <div class="exp-bars-col">
+            <h2 class="exp-bars-title">Programming Languages</h2>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">JavaScript</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress exp-bar-js"
+                  data-progress="90"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">HTML/CSS</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress exp-bar-htmlcss"
+                  data-progress="98"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">Python</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="90"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">TypeScript</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="75"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="exp-bars-col">
+            <h2 class="exp-bars-title">Frameworks &amp; Tools</h2>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">React.js</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="75"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">Tailwind CSS</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="85"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">Git</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="98"
+                ></div>
+              </div>
+            </div>
+            <div class="exp-bar-row">
+              <span class="exp-bar-label">Vite</span>
+              <div class="exp-bar-bg">
+                <div
+                  class="exp-bar-fill skill-progress"
+                  data-progress="60"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h2 class="title">Projects</h2>
+        <div class="project-showcase-row">
+          <div class="project-showcase-card">
+            <div class="project-showcase-imgbox">
+              <img
+                src="./assets/pawcare.gif"
+                alt="PawCare"
+                class="project-showcase-img"
+              />
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-showcase-title">Paws & Care</div>
+
+              <div class="project-showcase-desc">
+                Paws & Care is a modern, responsive pet adoption website that
+                connects loving pets with caring homes. It offers an easy-to-use
+                platform for browsing available pets and starting the adoption
+                process from any device.
+              </div>
+              <div class="project-showcase-tools">
+                <span class="project-tool">HTML</span>
+                <span class="project-tool">CSS</span>
+                <span class="project-tool">JavaScript</span>
+              </div>
+              <div class="project-showcase-actions">
+                <a
+                  href="https://oishikbanik.github.io/paw-care/"
+                  class="project-action-btn"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Website</a
+                >
+                <a
+                  href="https://github.com/oishikbanik/paw-care"
+                  class="project-action-btn"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  ><img src="assets/github.png" alt="GitHub" loading="lazy" />
+                  <span style="display: inline-block">GitHub</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-showcase-card">
+            <div class="project-showcase-imgbox">
+              <img
+                src="./assets/nondonkanon.gif"
+                alt="nondonkanon"
+                class="project-showcase-img"
+              />
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-showcase-title">NondonKanon</div>
+
+              <div class="project-showcase-desc">
+                NondonKanon is a fully responsive eCommerce website where users
+                can browse and shop for sarees, skincare products, and jewelry.
+                It features product search, filtering options, and a seamless
+                buying experience across all devices.
+              </div>
+              <div class="project-showcase-tools">
+                <span class="project-tool">HTML</span>
+                <span class="project-tool">CSS</span>
+                <span class="project-tool">JavaScript</span>
+                <span class="project-tool">TypeScript</span>
+              </div>
+              <div class="project-showcase-actions">
+                <a
+                  href="https://github.com/oishikbanik/nondonkanon-shop"
+                  class="project-action-btn"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Website</a
+                >
+                <a
+                  href="https://github.com/oishikbanik/nondonkanon-shop"
+                  class="project-action-btn"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  ><img src="assets/github.png" alt="GitHub" loading="lazy" />
+                  <span style="display: inline-block">GitHub</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-showcase-card">
+            <div class="project-showcase-imgbox">
+              <img
+                src="./assets/porfolio.gif"
+                alt="portfolio"
+                class="project-showcase-img"
+              />
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-showcase-title">My Portfolio</div>
+              <div class="project-showcase-desc">
+                A personal website showcasing my portfolio, skills, and
+                experiences.
+              </div>
+              <div class="project-showcase-tools">
+                <span class="project-tool">HTML</span>
+                <span class="project-tool">CSS</span>
+                <span class="project-tool">JavaScript</span>
+              </div>
+              <div class="project-showcase-actions">
+                <a
+                  href="https://oishikbanik.github.io/oishik-portfolio/"
+                  class="project-action-btn"
+                  >Website</a
+                >
+                <a
+                  href="https://github.com/oishikbanik/oishik-portfolio"
+                  class="project-action-btn"
+                  ><img src="assets/github.png" alt="GitHub" />
+                  <span style="display: inline-block">GitHub</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p>
+              <a
+                href="#"
+                class="email-protection"
+                data-email="contact.oishikbanik@gmail.com"
+                onclick="window.location.href = 'mailto:' + this.dataset.email; return false;"
+                >Email Me</a
+              >
+            </p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+              loading="lazy"
+            />
+            <p>
+              <a
+                href="https://www.linkedin.com/in/oishikbanik/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <nav>
         <div class="nav-links-container">
