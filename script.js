@@ -24,7 +24,6 @@ function animateSkillBars(sectionSelector) {
         return;
     }
 
-    // Initialize bars with 0 width
     bars.forEach(bar => {
         bar.style.width = '0';
         bar.style.transition = 'none';
@@ -104,7 +103,6 @@ class BackToTop {
         this.button.classList.toggle('visible', shouldShow);
     }
 
-
     scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -112,6 +110,41 @@ class BackToTop {
         });
     }
 }
+
+// Reading progress functionality
+class ReadingProgress {
+    constructor(progressSelector) {
+        this.progressBar = document.querySelector(progressSelector);
+        if (!this.progressBar) return;
+
+        this.current = 0;     // current displayed width
+        this.target = 0;      // target width based on scroll
+        this.easing = 0.1;    // 0.1 = smooth, 0.3 = faster
+
+        this.animate = this.animate.bind(this);
+        window.addEventListener('scroll', () => this.updateTarget(), { passive: true });
+
+        this.updateTarget(); // initialize
+        this.animate();      // start animation loop
+    }
+
+    updateTarget() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        this.target = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    }
+
+    animate() {
+        // Lerp current toward target
+        this.current += (this.target - this.current) * this.easing;
+        this.progressBar.style.width = `${this.current.toFixed(2)}%`;
+
+        requestAnimationFrame(this.animate);
+    }
+}
+
+
 
 // DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -123,4 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     new BackToTop('back-to-top');
+    new ReadingProgress('.reading-progress');
 });

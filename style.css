@@ -51,6 +51,18 @@
   transition: width 1s ease-out;
 }
 
+.reading-progress {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 2px; 
+    background: #222222;
+    width: 0; 
+    z-index: 1000;
+    pointer-events: none;
+    transition: height 0.2s;
+}
+
 
 /* GENERAL */
 
