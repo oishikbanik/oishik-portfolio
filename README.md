@@ -42,11 +42,11 @@ The portfolio is fully responsive with breakpoints at:
 
 ## 🌐 Live Demo
 
-Visit the live portfolio: [https://oishikbanik.github.io/oishik-portfolio/](https://oishikbanik.github.io/oishik-portfolio/)
+Visit the live portfolio: [https://oishikbanik.vercel.app](https://oishikbanik.vercel.app)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License
 
 ## 🤝 Connect With Me
 
